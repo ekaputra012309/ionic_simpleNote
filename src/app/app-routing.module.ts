@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'detail',
+    loadChildren: () => import('./modals/detail/detail.module').then( m => m.DetailPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'form-note',
+    loadChildren: () => import('./modals/form-note/form-note.module').then( m => m.FormNotePageModule)
+  },
 ];
 
 @NgModule({
